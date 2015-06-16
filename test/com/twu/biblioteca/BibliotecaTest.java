@@ -38,9 +38,19 @@ public class BibliotecaTest {
     }
 
     @Test
-    public void shouldListAllBooks() {
+    public void shouldPrintOneBookTitleWhenThereIsOneBook() {
+        books.add("BookOne");
+
+        biblioteca.listBooks();
+
+        verify(printStream).println("BookOne");
+    }
 
 
+    @Test
+    public void shouldPrintNothingWhenThereAreNoBooks() {
+        biblioteca.listBooks();
 
+        verify(printStream).println("");
     }
 }
