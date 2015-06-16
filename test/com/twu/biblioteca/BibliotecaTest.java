@@ -26,4 +26,9 @@ public class BibliotecaTest {
 
         verify(printStream).println("Welcome to the biblioteca!");
     }
+
+    @Test
+    public void shouldListAllBooks(){
+
+    }
 }
