@@ -9,20 +9,20 @@ public class BibliotecaTest {
 
     @Test
     public void shouldPrintSomething() {
-        Biblioteca biblioteca = new Biblioteca();
         PrintStream printStream = mock(PrintStream.class);
+        Biblioteca biblioteca = new Biblioteca(printStream);
 
-        biblioteca.welcome(printStream);
+        biblioteca.welcome();
 
         verify(printStream).println(contains(""));
     }
 
     @Test
     public void shouldPrintAWelcomeMessage() {
-        Biblioteca biblioteca = new Biblioteca();
         PrintStream printStream = mock(PrintStream.class);
+        Biblioteca biblioteca = new Biblioteca(printStream);
 
-        biblioteca.welcome(printStream);
+        biblioteca.welcome();
 
         verify(printStream).println("Welcome to the biblioteca!");
     }
