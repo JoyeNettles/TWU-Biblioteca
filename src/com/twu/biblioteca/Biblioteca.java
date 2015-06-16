@@ -18,4 +18,10 @@ public class Biblioteca {
     public void welcome() {
         printStream.println("Welcome to the biblioteca!");
     }
+
+    public void listBooks() {
+        for (String book : books) {
+            printStream.println(book);
+        }
+    }
 }
