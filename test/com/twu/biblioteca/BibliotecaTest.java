@@ -16,4 +16,14 @@ public class BibliotecaTest {
 
         verify(printStream).println(contains(""));
     }
+
+    @Test
+    public void shouldPrintAWelcomeMessage() {
+        Biblioteca biblioteca = new Biblioteca();
+        PrintStream printStream = mock(PrintStream.class);
+
+        biblioteca.welcome(printStream);
+
+        verify(printStream).println("Welcome to the biblioteca!");
+    }
 }
