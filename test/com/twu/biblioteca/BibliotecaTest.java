@@ -51,6 +51,19 @@ public class BibliotecaTest {
     public void shouldPrintNothingWhenThereAreNoBooks() {
         biblioteca.listBooks();
 
-        verify(printStream).println("");
+        verify(printStream, never()).println(anyString());
     }
+
+    @Test
+    public void shouldPrintAllBooksWhenThereAreMultipleBooks() {
+        books.add("BookOne");
+        books.add("BookTwo");
+
+        biblioteca.listBooks();
+
+        verify(printStream).println("BookOne");
+        verify(printStream).println("BookTwo");
+    }
+
+
 }
