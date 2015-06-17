@@ -16,7 +16,7 @@ public class BibliotecaTest {
     Biblioteca biblioteca;
 
     @Before
-    public void setup() {
+    public void setUp() {
         printStream = mock(PrintStream.class);
         books = new ArrayList<String>();
         biblioteca = new Biblioteca(printStream, books);

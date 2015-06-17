@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import org.junit.Before;
+import org.junit.Test;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
@@ -15,10 +16,11 @@ public class BibliotecaAppTest {
     Biblioteca biblioteca;
 
     @Before
-    public void setup() {
+    public void setUp() {
         printStream = mock(PrintStream.class);
         books = new ArrayList<String>();
         biblioteca = new Biblioteca(printStream, books);
 
     }
+
 }
